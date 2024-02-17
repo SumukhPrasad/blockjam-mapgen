@@ -4,15 +4,64 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Map Generator</title>
+
+     <style>
+          body {
+               display: flex;
+               flex-direction: row;
+               height: 100vh;
+               width: 100vw;
+               overflow: hidden;
+          }
+
+          #tileArea {
+               height: 100%;
+               width: 100%;
+               display: flex;
+               flex-direction: column;
+          }
+
+          #mapProperties {
+               background: linear-gradient(#eee, #fff);
+               padding: 10px;
+          }
+
+          #map {
+               background: linear-gradient(#eee, #fff);
+               width: 100%;
+               height: 100%;
+          }
+
+          #mapArea {
+               height: 100%;
+               width: 100%;
+               display: flex;
+               flex-direction: column;
+          }
+
+          #mapPreview {
+               background: linear-gradient(#eee, #fff);
+               width: 100%;
+               aspect-ratio: 1;
+          }
+
+          #tileEditor {
+               background: linear-gradient(#eee, #fff);
+               width: 100%;
+               height: 100%;
+          }
+     </style>
+
 </head>
 <body style="margin: 0;">
 
      <div id="tileArea">
           <div id="mapProperties">
+               <h1>BlockJam Map Generator</h1>
                <form>
                     Name: <input type="text" name="name" id="name"><br>
-                    X: <input type="number" name="tilesX" id="tilesX"><br>
-                    Z: <input type="number" name="tilesZ" id="tilesZ">
+                    X: <input min="1" type="number" value="5" name="tilesX" id="tilesX"><br>
+                    Z: <input min="1" type="number" value="5" name="tilesZ" id="tilesZ">
                </form>
           </div>
           <div id="map"></div>

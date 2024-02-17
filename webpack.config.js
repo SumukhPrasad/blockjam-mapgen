@@ -12,12 +12,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './dist/index.html',
 			filename: "./index.html"
-		}),
-		new CopyPlugin({
-			patterns: [
-			  { from: "./src/images", to: "./images" },
-			],
-		}),
+		})
 	],
 	devServer: {
 		allowedHosts: ["all"]
